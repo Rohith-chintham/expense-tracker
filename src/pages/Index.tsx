@@ -1,13 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from "react";
+import Layout from "@/components/Layout";
+import DashboardSummary from "@/components/DashboardSummary";
+import ExpenseChart from "@/components/ExpenseChart";
+import CategoryBreakdown from "@/components/CategoryBreakdown";
+import RecentExpenses from "@/components/RecentExpenses";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <Layout>
+      <div>
+        <h1 className="text-2xl font-bold tracking-tight mb-6">Dashboard</h1>
+        <div className="grid gap-6">
+          <DashboardSummary />
+          <div className="grid md:grid-cols-2 gap-6">
+            <CategoryBreakdown />
+            <RecentExpenses />
+          </div>
+          <ExpenseChart />
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

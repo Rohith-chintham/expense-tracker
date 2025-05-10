@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				expense: {
+					purple: '#9b87f5',
+					'dark-purple': '#6E59A5',
+					'light-purple': '#E5DEFF',
 				}
 			},
 			borderRadius: {
@@ -84,11 +90,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				slideIn: {
+					from: {
+						transform: 'translateY(20px)',
+						opacity: '0'
+					},
+					to: {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'slide-in': 'slideIn 0.3s ease-out forwards'
+			},
+			backgroundImage: {
+				'gradient-purple': 'linear-gradient(135deg, #9b87f5 0%, #7E69AB 100%)',
 			}
 		}
 	},
